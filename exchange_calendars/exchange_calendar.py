@@ -54,7 +54,7 @@ from .utils.pandas_utils import days_at_time
 if TYPE_CHECKING:
     from pandas._libs.tslibs.nattype import NaTType
 
-GLOBAL_DEFAULT_START = pd.Timestamp.now().floor("D") - pd.DateOffset(years=20)
+GLOBAL_DEFAULT_START = pd.Timestamp.now().floor("D") - pd.DateOffset(years=35)
 # Give an aggressive buffer for logic that needs to use the next trading
 # day or minute.
 GLOBAL_DEFAULT_END = pd.Timestamp.now().floor("D") + pd.DateOffset(years=1)
@@ -160,7 +160,7 @@ class ExchangeCalendar(ABC):
 
     Parameters
     ----------
-    start : default: later of 20 years ago or first supported start date.
+    start : default: later of 35 years ago or first supported start date.
         First calendar session will be `start`, if `start` is a session, or
         first session after `start`. Cannot be earlier than any date
         returned by class method `bound_min`.
