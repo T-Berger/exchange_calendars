@@ -5,4 +5,6 @@
 
 from setuptools import setup
 
-setup()
+setup(
+name="exchange_calendars"
+)
