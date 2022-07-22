@@ -6,5 +6,5 @@
 from setuptools import setup
 
 setup(
-name="exchange_calendars", packages=find_packages(include=["exchange_calendars", "exchange_calendars.*"]),
+name="exchange_calendars", py_modules=["exchange_calendars"],
 )
